@@ -202,10 +202,12 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
+
                         <configuration>
+
                             <projectName>serencucumber</projectName>
-                            <outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
-                            <cucumberOutput>C:\Users\Nayods\eclipse-workspace\Excallibium\lib\cucmber.json</cucumberOutput>
+                            <outputDirectory>${project.build.directory}lib/Reports/site/cucumber-reports</outputDirectory>
+                            <cucumberOutput>C:\Users\Nayods\eclipse-workspace\Excallibium\lib\cucumber.json</cucumberOutput>
                         <jsonFiles>C:\Users\Nayods\eclipse-workspace\Excallibium\lib\cucumber.json</jsonFiles>
                         </configuration>
                     </execution>

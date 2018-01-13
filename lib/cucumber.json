@@ -118,7 +118,7 @@
               "status": "undefined"
             },
             "line": 14,
-            "name": "Do search",
+            "name": "I click the submit button",
             "match": {},
             "keyword": "When "
           },
@@ -188,7 +188,7 @@
               "status": "undefined"
             },
             "line": 14,
-            "name": "Do search",
+            "name": "I click the submit button",
             "match": {},
             "keyword": "When "
           },
