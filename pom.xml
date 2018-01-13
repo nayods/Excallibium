@@ -1,0 +1,217 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.nayods.framework</groupId>
+  <artifactId>Excallibium</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Excallibium</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <cucumber.version>1.2.5</cucumber.version>
+    <selenium.version>2.48.2</selenium.version>
+      <webdriver.driver>chrome</webdriver.driver>
+
+  </properties>
+    <repositories>
+        <repository>
+            <id>repo.bodar.com</id>
+            <url>http://repo.bodar.com</url>
+        </repository>
+    </repositories>
+
+  <dependencies>
+
+      <dependency>
+          <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+          <artifactId>owasp-java-html-sanitizer</artifactId>
+          <version>20170515.1</version>
+      </dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>20.0</version>
+      </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+      <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+      <dependency>
+          <groupId>info.cukes</groupId>
+          <artifactId>cucumber-core</artifactId>
+          <version>1.2.5</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+      <dependency>
+          <groupId>net.masterthought</groupId>
+          <artifactId>cucumber-reporting</artifactId>
+          <version>3.13.0</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-html -->
+      <dependency>
+          <groupId>info.cukes</groupId>
+          <artifactId>cucumber-html</artifactId>
+          <version>0.2.6</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+      <dependency>
+          <groupId>org.hamcrest</groupId>
+          <artifactId>hamcrest-all</artifactId>
+          <version>1.3</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>${selenium.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+      <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
+      <dependency>
+          <groupId>info.cukes</groupId>
+          <artifactId>gherkin</artifactId>
+          <version>2.12.2</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>info.cukes</groupId>
+          <artifactId>cucumber-java</artifactId>
+          <version>1.2.5</version>
+          <scope>test</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-report-resources -->
+      <dependency>
+          <groupId>net.serenity-bdd</groupId>
+          <artifactId>serenity-report-resources</artifactId>
+          <version>1.8.20</version>
+      </dependency>
+      <dependency>
+          <groupId>org.assertj</groupId>
+          <artifactId>assertj-core</artifactId>
+          <version>2.8.0</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>com.github.mkolisnyk</groupId>
+          <artifactId>cucumber-reports</artifactId>
+          <version>0.0.2</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.googlecode.totallylazy</groupId>
+          <artifactId>totallylazy</artifactId>
+          <version>1.86</version>
+      </dependency>
+      <dependency>
+          <groupId>net.serenity-bdd</groupId>
+          <artifactId>serenity-core</artifactId>
+          <version>1.8.19</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>net.serenity-bdd</groupId>
+          <artifactId>serenity-cucumber</artifactId>
+          <version>1.6.9</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+      <dependency>
+          <groupId>net.masterthought</groupId>
+          <artifactId>maven-cucumber-reporting</artifactId>
+          <version>3.13.0</version>
+      </dependency>
+
+  </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <includes>
+                        <include>**/**.java</include>
+                    </includes>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
+                    <reuseForks>true</reuseForks>
+                    <systemPropertyVariables>
+                        <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                    </systemPropertyVariables>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>3.13.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.googlecode.totallylazy</groupId>
+                        <artifactId>totallylazy</artifactId>
+                        <version>991</version>
+                        <scope>system</scope>
+                        <systemPath>${project.basedir}/lib/totallylazy-991.jar</systemPath>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>serencucumber</projectName>
+                            <outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
+                            <cucumberOutput>C:\Users\Nayods\eclipse-workspace\Excallibium\lib\cucmber.json</cucumberOutput>
+                        <jsonFiles>C:\Users\Nayods\eclipse-workspace\Excallibium\lib\cucumber.json</jsonFiles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
