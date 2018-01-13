@@ -10,6 +10,7 @@ import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.Reportable;
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.After;
 
@@ -65,7 +66,7 @@ public class SearchWikipediaSteps {
         }
 
     }
-
+@AfterClass
     private File getScreenShotFile () {
         File reportOutputDirectory = new File("target");
         List<String> jsonFiles = new ArrayList<>();
@@ -73,7 +74,7 @@ public class SearchWikipediaSteps {
         jsonFiles.add("cucumber-report-2.json");
 
         String buildNumber = "1";
-        String projectName = "cucumberProject";
+        String projectName = "Reusable Framework With Cucumber";
         boolean runWithJenkins = true;
         boolean parallelTesting = false;
 
